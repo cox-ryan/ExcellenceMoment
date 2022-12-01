@@ -45,12 +45,13 @@ if (navigator.mediaDevices.getUserMedia) {
           var width = .5;
           var id = setInterval(frame, 50);
           function frame() {
-            if (width >= 100) {
-              clearInterval(id);
-              i = 0;
-            } else {
+            if (width <= 100 && record.disabled == true) {
               width++;
               elem.style.width = width + "%";
+            } else {
+              clearInterval(id);
+              i = 0;
+              elem.style.width = 1;
             }
           }
         }
@@ -69,6 +70,7 @@ if (navigator.mediaDevices.getUserMedia) {
       record.disabled = false;
 
       var elem = document.getElementById("myBar");
+      elem.style.width = 100;
     }
 
     mediaRecorder.onstop = function(e) {
