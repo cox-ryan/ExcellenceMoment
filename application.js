@@ -6,6 +6,27 @@ const soundClips = document.querySelector('.sound-clips');
 const canvas = document.querySelector('.visualizer');
 const mainSection = document.querySelector('.main-controls');
 
+
+const modal = document.querySelector(".modal");
+const trigger = document.querySelector(".trigger");
+const closeButton = document.querySelector(".close-button");
+
+function toggleModal() {
+    modal.classList.toggle("show-modal");
+}
+
+function windowOnClick(event) {
+    if (event.target === modal) {
+        toggleModal();
+    }
+}
+
+toggleModal();
+
+trigger.addEventListener("click", toggleModal);
+closeButton.addEventListener("click", toggleModal);
+window.addEventListener("click", windowOnClick);
+
 // disable stop button while not recording
 
 stop.disabled = true;
@@ -48,14 +69,12 @@ if (navigator.mediaDevices.getUserMedia) {
             if (width < 100 && record.disabled == true) {
               width++;
               elem.style.width = width + "%";
-        
+
             } else {
               clearInterval(id);
               i = 0;
               elem.style.width = 1;
-
               stop.click();
-
             }
           }
         }
@@ -86,11 +105,15 @@ if (navigator.mediaDevices.getUserMedia) {
       const clipLabel = document.createElement('p');
       const audio = document.createElement('audio');
       const deleteButton = document.createElement('button');
+      const uploadButton = document.createElement('button');
 
       clipContainer.classList.add('clip');
       audio.setAttribute('controls', '');
       deleteButton.textContent = 'Delete';
       deleteButton.className = 'delete';
+
+      uploadButton.textContent = 'Upload';
+      uploadButton.className = 'upload';
 
       if(clipName === null) {
         clipLabel.textContent = 'My unnamed clip';
@@ -101,6 +124,7 @@ if (navigator.mediaDevices.getUserMedia) {
       clipContainer.appendChild(audio);
       clipContainer.appendChild(clipLabel);
       clipContainer.appendChild(deleteButton);
+      clipContainer.appendChild(uploadButton);
       soundClips.appendChild(clipContainer);
 
       audio.controls = true;
