@@ -17,6 +17,7 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
+  background-color: tomato;
 }
 
 h1, h2 {
@@ -46,6 +47,18 @@ canvas {
   padding: 1rem;
   width: calc(50% - 0.25rem);
 }
+
+#myProgress {
+  width: 100%;
+  background-color: #ddd;
+}
+
+#myBar {
+  width: 1%;
+  height: 30px;
+  background-color: #04AA6D;
+}
+
 
 button {
   font-size: 1rem;

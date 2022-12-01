@@ -20,6 +20,7 @@ const canvasCtx = canvas.getContext("2d");
 if (navigator.mediaDevices.getUserMedia) {
   console.log('getUserMedia supported.');
 
+
   const constraints = { audio: true };
   let chunks = [];
 
@@ -36,6 +37,24 @@ if (navigator.mediaDevices.getUserMedia) {
 
       stop.disabled = false;
       record.disabled = true;
+
+      var i = 0;
+        if (i == 0) {
+          i = 1;
+          var elem = document.getElementById("myBar");
+          var width = .5;
+          var id = setInterval(frame, 50);
+          function frame() {
+            if (width >= 100) {
+              clearInterval(id);
+              i = 0;
+            } else {
+              width++;
+              elem.style.width = width + "%";
+            }
+          }
+        }
+
     }
 
     stop.onclick = function() {
@@ -48,6 +67,8 @@ if (navigator.mediaDevices.getUserMedia) {
 
       stop.disabled = true;
       record.disabled = false;
+
+      var elem = document.getElementById("myBar");
     }
 
     mediaRecorder.onstop = function(e) {
@@ -170,6 +191,7 @@ function visualize(stream) {
 
   }
 }
+
 
 window.onresize = function() {
   canvas.width = mainSection.offsetWidth;
