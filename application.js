@@ -43,15 +43,19 @@ if (navigator.mediaDevices.getUserMedia) {
           i = 1;
           var elem = document.getElementById("myBar");
           var width = .5;
-          var id = setInterval(frame, 50);
+          var id = setInterval(frame, 200);
           function frame() {
-            if (width <= 100 && record.disabled == true) {
+            if (width < 100 && record.disabled == true) {
               width++;
               elem.style.width = width + "%";
+        
             } else {
               clearInterval(id);
               i = 0;
               elem.style.width = 1;
+
+              stop.click();
+
             }
           }
         }
