@@ -4,51 +4,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>My Excellence Moment</title>
-    <link href="application.css" rel="stylesheet" type="text/css">
+    <link href="index.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-
     <div class="wrapper">
-
       <header>
         <h1>My Excellence Moment</h1>
       </header>
-
-      <section class="main-controls">
-        <canvas class="visualizer" height="60px"></canvas>
-        <div id="buttons">
-          <button class="record">Record</button>
-          <button class="stop">Stop</button>
-        </div>
-      </section>
-
-      <div id="myProgress">
-        <div id="myBar"></div>
+      <br>
+      <div class="intro"
+        <p> Please hit the "Record" button to start the recording.</p>
+        <p> You will have 60 seconds to tell your story, or you can click "Stop" if you're finished</p>
+        <p> Listen back to your recording. If you're happy with it, click "Upload", if not, click
+          "Delete" and then record again.<p>
+        <p> Click the button below to get started </p>
       </div>
       <br>
-      <br>
-
-      <button class="trigger">Click here for instructions.</button>
-
-      <div class="modal">
-        <div class="modal-content">
-          <span class="close-button">&times;</span>
-          <h1>Welcome to My Excellence Moment!</h1>
-          <br>
-          <p> Please hit the "Record" button to start the recording.</p>
-          <p> You will have 60 seconds to tell your story, or you can click "stop" if you're finished</p>
-          <p> Listen back to your recording. If you're happy with it, click "upload", if not, click "retry" and record again.<p>
-        </div>
-      </div>
-
-      <section class="sound-clips">
-
-
-      </section>
-
+      <button class="enter" onclick="window.location.href='application.html';">
+        Let's go
+      </button>
     </div>
-
-    <script src="application.js"></script>
-
   </body>
 </html>

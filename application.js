@@ -21,7 +21,6 @@ function windowOnClick(event) {
     }
 }
 
-toggleModal();
 
 trigger.addEventListener("click", toggleModal);
 closeButton.addEventListener("click", toggleModal);
