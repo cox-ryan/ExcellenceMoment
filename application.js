@@ -98,7 +98,7 @@ if (navigator.mediaDevices.getUserMedia) {
     mediaRecorder.onstop = function(e) {
       console.log("data available after MediaRecorder.stop() called.");
 
-      const clipName = prompt('What woudl you like to name your story?','My story');
+      const clipName = prompt('What would you like to name your story?','My story');
 
       const clipContainer = document.createElement('article');
       const clipLabel = document.createElement('p');
