@@ -52,6 +52,8 @@ const canvasCtx = canvas.getContext("2d");
 
 //main block for doing the audio recording
 
+
+
 if (navigator.mediaDevices.getUserMedia) {
   console.log('getUserMedia supported.');
 
@@ -113,7 +115,7 @@ if (navigator.mediaDevices.getUserMedia) {
     mediaRecorder.onstop = function (e) {
       console.log("data available after MediaRecorder.stop() called.");
 
-      const clipName = prompt('What would you like to name your story?', 'My story');
+      const clipName = localStorage.getItem("storageName") + "-" + Date.now();
 
       const clipContainer = document.createElement('article');
       const clipLabel = document.createElement('p');
