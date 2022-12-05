@@ -6,10 +6,12 @@ const soundClips = document.querySelector('.sound-clips');
 const canvas = document.querySelector('.visualizer');
 const mainSection = document.querySelector('.main-controls');
 
-
 const modal = document.querySelector(".modal");
 const trigger = document.querySelector(".trigger");
 const closeButton = document.querySelector(".close-button");
+
+
+let uploadTarget;
 
 var uploadBucketName = "BUCKET_NAME";  //my-excellence-moment-audio";
 var bucketRegion = "REGION";  //"ca-central-1";
@@ -151,6 +153,7 @@ if (navigator.mediaDevices.getUserMedia) {
       console.log("recorder stopped");
 
       uploadButton.onclick = async function (e) {
+        uploadTarget = e;
         let evtTgt = e.target;
 
         let clipSrc = evtTgt.parentNode.getElementsByTagName('audio')[0].currentSrc;
@@ -172,6 +175,7 @@ if (navigator.mediaDevices.getUserMedia) {
         promise.then(
           function (data) {
             alert("Successfully uploaded clip.");
+            deleteRecording(uploadTarget)
           },
           function (err) {
             return alert(`There was an error uploading your clip: \n${err.message}`);
@@ -208,6 +212,11 @@ if (navigator.mediaDevices.getUserMedia) {
 
 } else {
   console.log('getUserMedia not supported on your browser!');
+}
+
+function deleteRecording(){
+  let evtTgt = uploadTarget.target;
+  evtTgt.parentNode.parentNode.removeChild(evtTgt.parentNode);
 }
 
 function visualize(stream) {

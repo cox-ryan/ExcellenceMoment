@@ -22,7 +22,7 @@
       <form>
         <br>
         <label for="Offices">Choose an office:</label>
-        <select name="office" id="offices">
+        <select name="office" id="offices" required>
             <option value="boston">Boston</option>
             <option value="chicago">Chicago</option>
             <option value="colombia">Colombia</option>
@@ -42,14 +42,25 @@
           <br>
     </form>
       <br>
-      <button id="enter" class="enter" onclick="window.location.href='application.html';">
+      <button id="enter" class="enter" onclick="go()">
         Let's go
       </button>
     </div>
   </body>
   <script>
+  function go(){
+    if(document.getElementById("offices").selectedIndex === -1){
+      alert("Please select an office!")
+      return;
+    }
+      
+    window.location.href='application.html';
+  }
+
   offices.onclick = function() {
     localStorage.setItem("storageName",offices.value);
   }
+
+  document.getElementById("offices").selectedIndex = -1;
   </script>
 </html>
