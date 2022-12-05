@@ -7,45 +7,35 @@
     <link href="index.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <div class="wrapper">
+    <div class="wrapper" id="wrapper">
       <header>
-        <h1>My Excellence Moment</h1>
+         <img src="assets/home_screen.svg" alt="home" width="1000px">
       </header>
-      <br>
-      <div class="intro"
-        <p> Please hit the "Record" button to start the recording.</p>
-        <p> You will have 60 seconds to tell your story, or you can click "Stop" if you're finished</p>
-        <p> Listen back to your recording. If you're happy with it, click "Upload", if not, click
-          "Delete" and then record again.<p>
-        <p> Click the button below to get started </p>
+      <main>
+        <form>
+          <label for="Offices">Choose an office:</label>
+          <select name="office" id="offices">
+              <option value="boston">Boston</option>
+              <option value="chicago">Chicago</option>
+              <option value="colombia">Colombia</option>
+              <option value="dallas">Dallas</option>
+              <option value="houston">Houston</option>
+              <option value="losangeles">Los Angeles</option>
+              <option value="montreal">Montreal</option>
+              <option value="newjersey">New Jersey</option>
+              <option value="newyork">New York</option>
+              <option value="oakland">Oakland</option>
+              <option value="sanfrancisco">San Francisco</option>
+              <option value="seattle">Seattle</option>
+              <option value="Toronto">Toronto</option>
+              <option value="washingtondc">Washington D.C.</option>
+            </select>
+      </form>
+    </main>
+    <footer>
+        <p><a href="application.html"><img border="0" src="assets/start_button.svg" width="250" height="100" class="center"></a></p>
+      </footer>
       </div>
-      <form>
-        <br>
-        <label for="Offices">Choose an office:</label>
-        <select name="office" id="offices">
-            <option value="boston">Boston</option>
-            <option value="chicago">Chicago</option>
-            <option value="colombia">Colombia</option>
-            <option value="Dallas">Dallas</option>
-            <option value="Houston">Houston</option>
-            <option value="losangeles">Los Angeles</option>
-            <option value="Montreal">Montreal</option>
-            <option value="newjersey">New Jersey</option>
-            <option value="newyork">New York</option>
-            <option value="oakland">Oakland</option>
-            <option value="sanfrancisco">San Francisco</option>
-            <option value="seattle">Seattle</option>
-            <option value="Toronto">Toronto</option>
-            <option value="washingtondc">Washington D.C.</option>
-          </select>
-          <br>
-          <br>
-    </form>
-      <br>
-      <button id="enter" class="enter" onclick="window.location.href='application.html';">
-        Let's go
-      </button>
-    </div>
   </body>
   <script>
   offices.onclick = function() {
