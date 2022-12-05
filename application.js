@@ -7,14 +7,13 @@ const canvas = document.querySelector('.visualizer');
 const mainSection = document.querySelector('.main-controls');
 
 
-
 const trigger = document.querySelector(".trigger");
 const closeButton = document.querySelector(".close-button");
 
 
 
 function windowOnClick(event) {
-    if (event.target === modal) {
+     {
     }
 }
 window.addEventListener("click", windowOnClick);

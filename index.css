@@ -34,4 +34,5 @@ office{
     grid-row-end: 3;
     background-color: black;
     margin: auto;
+    max-width: inherit;
     }
