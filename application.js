@@ -28,18 +28,9 @@ var s3 = new AWS.S3({
   params: { Bucket: uploadBucketName }
 });
 
-function toggleModal() {
-  modal.classList.toggle("show-modal");
-}
+function windowOnClick(event) {}
 
-function windowOnClick(event) {
-  if (event.target === modal) {
-    toggleModal();
-  }
-}
 
-trigger.addEventListener("click", toggleModal);
-closeButton.addEventListener("click", toggleModal);
 window.addEventListener("click", windowOnClick);
 
 // disable stop button while not recording
