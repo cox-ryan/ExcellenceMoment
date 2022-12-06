@@ -42,10 +42,6 @@ stop.disabled = true;
 let audioCtx;
 const canvasCtx = canvas.getContext("2d");
 
-//main block for doing the audio recording
-
-
-
 if (navigator.mediaDevices.getUserMedia) {
   console.log('getUserMedia supported.');
 
@@ -72,7 +68,7 @@ if (navigator.mediaDevices.getUserMedia) {
         i = 1;
         var elem = document.getElementById("myBar");
         var width = .5;
-        var id = setInterval(frame, 200);
+        var id = setInterval(frame, 600); //timer for 60 seconds
         function frame() {
           if (width < 100 && record.disabled == true) {
             width++;
@@ -171,6 +167,7 @@ if (navigator.mediaDevices.getUserMedia) {
             return alert(`There was an error uploading your clip: \n${err.message}`);
           }
         );
+        window.location.href='thankyou.html';
       }
 
       deleteButton.onclick = function (e) {

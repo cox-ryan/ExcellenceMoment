@@ -2,6 +2,10 @@
 
 }
 
+body {
+  background-color: black;
+}
+
 .wrapper{
   display: grid;
   background: #000000;
