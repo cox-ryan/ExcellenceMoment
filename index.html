@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width">
     <title>My Excellence Moment</title>
     <link href="index.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/png" href="assets/quality-of-work.jpg" />
   </head>
   <body>
     <div class="wrapper" id="wrapper">
@@ -33,13 +34,24 @@
       </form>
     </main>
     <footer>
-        <p><a href="application.html"><img border="0" src="assets/start_button.svg" width="250" height="100" class="center"></a></p>
+        <p><input onclick="go()" type="image" border="0" src="assets/start_button.svg" width="250" height="100" class="center"></p>
       </footer>
       </div>
   </body>
   <script>
+  function go(){
+    if(document.getElementById("offices").selectedIndex === -1){
+      alert("Please select an office!")
+      return;
+    }
+      
+    window.location.href='application.html';
+  }
+
   offices.onclick = function() {
     localStorage.setItem("storageName",offices.value);
   }
+
+  document.getElementById("offices").selectedIndex = -1;
   </script>
 </html>
