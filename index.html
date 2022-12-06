@@ -14,8 +14,8 @@
       </header>
       <main>
         <form>
-          <label for="Offices">Choose an office:</label>
-          <select name="office" id="offices">
+          <label for="Offices">Choose your office:</label>
+          <select name="office" id="offices" onchange="if (this.selectedIndex) start();">
               <option value="boston">Boston</option>
               <option value="chicago">Chicago</option>
               <option value="colombia">Colombia</option>
@@ -28,30 +28,29 @@
               <option value="oakland">Oakland</option>
               <option value="sanfrancisco">San Francisco</option>
               <option value="seattle">Seattle</option>
-              <option value="Toronto">Toronto</option>
+              <option value="toronto">Toronto</option>
               <option value="washingtondc">Washington D.C.</option>
             </select>
       </form>
     </main>
     <footer>
-        <p><input onclick="go()" type="image" border="0" src="assets/start_button.svg" width="250" height="100" class="center"></p>
+        <p><a href="application.html"><input  type="image" border="0" src="assets/start_button.svg" width="250" height="100" class="center" id="startButton" style="visibility: hidden"></p>
       </footer>
       </div>
   </body>
   <script>
-  function go(){
-    if(document.getElementById("offices").selectedIndex === -1){
-      alert("Please select an office!")
-      return;
-    }
-      
-    window.location.href='application.html';
-  }
-
+  
   offices.onclick = function() {
     localStorage.setItem("storageName",offices.value);
+  }
+
+
+  function start(){
+    document.getElementById("startButton").style = "visibility: visible";
   }
 
   document.getElementById("offices").selectedIndex = -1;
   </script>
 </html>
+
+
