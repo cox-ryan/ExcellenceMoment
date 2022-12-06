@@ -280,7 +280,7 @@ setupTimer();
  
 function startTimer() {
     // wait 60 seconds before calling goInactive
-    timeoutID = window.setTimeout(goInactive, 60000);
+    timeoutID = window.setTimeout(goInactive, 120000);
 }
  
 function resetTimer(e) {
