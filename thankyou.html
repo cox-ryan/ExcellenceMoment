@@ -18,12 +18,12 @@
       </footer>
       </div>
   </body>
-  
+
   <script type="text/javascript">
 
 /// go back to front page after a period of inactivity
 var timeoutID;
- 
+
 function setupTimer() {
     this.addEventListener("mousemove", resetTimer, false);
     this.addEventListener("mousedown", resetTimer, false);
@@ -35,22 +35,22 @@ function setupTimer() {
     startTimer();
 }
 setupTimer();
- 
+
 function startTimer() {
     // wait 45 seconds before calling goInactive
     timeoutID = window.setTimeout(goInactive, 60000);
 }
- 
+
 function resetTimer(e) {
     window.clearTimeout(timeoutID);
     goActive();
 }
- 
+
 function goInactive() {
     // do something
     window.location.href = 'index.html';
 }
- 
+
 function goActive() {
     // do something
     // window.location.href = 'index.html';

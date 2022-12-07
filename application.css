@@ -16,25 +16,33 @@ background: #000000;
 
 }
 
-.header{
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  max-width: 800px;
-  max-height: 90%;
+header{
+  display: flex;
+  justify-content: center;
 }
 
 .main-controls {
-  padding: 0.5rem 0;
   width:auto;
+  position:relative;
+  top:-140px;
+}
+
+.visualiser{
+  display: flex;
+  justify-content: center;
+  max-width: inherit;
+  min-width:0px;
+  display:inline-block;
+  transform:translatex(0px) translatey(0px) !important;
+  height:75px;
+  width:100%;
 }
 
 #buttons {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   height:200px;
+  justify-content: center;
 }
 
 .record{
@@ -42,6 +50,8 @@ background: #000000;
   background-repeat: no-repeat;
   width:200px;
   height:200px;
+  visibility: visible;
+  justify-content: center;
 }
 
 .stop{
@@ -49,11 +59,15 @@ background: #000000;
   background-repeat: no-repeat;
   width:200px;
   height:200px;
+  visibility: hidden;
+  justify-content:center;
 }
 
 #myProgress {
   width: 100%;
   background-color: white;
+  position:relative;
+  top:-140px;
 }
 
 #myBar {
@@ -69,17 +83,17 @@ button {
   text-align: center;
   color: white;
   border: none;
-  transition: all 0.2s;
+  /*transition: all 0.2s; */
   padding: 0.5rem;
 }
 
 
-
+/*
 button:active {
   box-shadow: inset 0px 0px 20px rgba(0,0,0,0.5);
   transform: translateY(2px);
 }
-
+*/
 
 /* Make the clips use as much space as possible, and
  * also show a scrollbar when there are too many clips to show
@@ -87,6 +101,8 @@ button:active {
 .sound-clips {
   flex: 1;
   overflow: auto;
+  position:relative;
+  top:-136px;
 }
 
 section, article {

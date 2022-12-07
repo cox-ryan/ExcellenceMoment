@@ -61,7 +61,9 @@ if (navigator.mediaDevices.getUserMedia) {
       record.style.background = "red";
 
       stop.disabled = false;
+      document.getElementsByClassName("stop")[0].style.visibility = 'visible';
       record.disabled = true;
+      document.getElementsByClassName("record")[0].style.visibility = 'hidden';
 
       var i = 0;
       if (i == 0) {
@@ -94,7 +96,9 @@ if (navigator.mediaDevices.getUserMedia) {
       // mediaRecorder.requestData();
 
       stop.disabled = true;
+      document.getElementsByClassName("stop")[0].style.visibility = 'hidden';
       record.disabled = false;
+      document.getElementsByClassName("record")[0].style.visibility = 'visible';
 
       var elem = document.getElementById("myBar");
       elem.style.width = 100;
@@ -265,7 +269,7 @@ function visualize(stream) {
 
 /// go back to front page after a period of inactivity
 var timeoutID;
- 
+
 function setupTimer() {
     this.addEventListener("mousemove", resetTimer, false);
     this.addEventListener("mousedown", resetTimer, false);
@@ -277,22 +281,22 @@ function setupTimer() {
     startTimer();
 }
 setupTimer();
- 
+
 function startTimer() {
     // wait 60 seconds before calling goInactive
     timeoutID = window.setTimeout(goInactive, 120000);
 }
- 
+
 function resetTimer(e) {
     window.clearTimeout(timeoutID);
     goActive();
 }
- 
+
 function goInactive() {
     // do something
     window.location.href = 'index.html';
 }
- 
+
 function goActive() {
     // do something
     // window.location.href = 'index.html';
