@@ -1,7 +1,7 @@
 
 
 html, body {
-  height: 100%;
+
 }
 
 body {
@@ -25,6 +25,7 @@ header{
   width:auto;
   position:relative;
   top:-140px;
+
 }
 
 .wrapper .main-controls .visualizer{
@@ -62,13 +63,13 @@ position:relative;
 }
 
 #myProgress {
-  width: 50;
   background-color: white;
   position:relative;
   top:-42vh !important;
   bottom:33px;
-  width:100vh;
+  width:256px;
  left:25vw;
+ max-width;
 }
 
 #myBar {
