@@ -101,7 +101,6 @@ if (navigator.mediaDevices.getUserMedia) {
       document.getElementsByClassName("record")[0].style.visibility = 'visible';
 
       var elem = document.getElementById("myBar");
-      elem.style.width = 100;
     }
 
     mediaRecorder.onstop = function (e) {

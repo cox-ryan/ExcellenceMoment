@@ -29,12 +29,14 @@ header{
 }
 
 .wrapper .main-controls .visualizer{
-position:relative;
+  display: flex;
+  justify-content: center;
+  max-width: inherit;
+  min-width:0px;
+  display:inline-block;
+  transform:translatex(0px) translatey(0px) !important;
   height:75px;
-  width:50%;
-  margin:auto;
-  left: 50vh;
-  top:-30vh;
+  width:100%;
 }
 
 #buttons {
@@ -63,13 +65,10 @@ position:relative;
 }
 
 #myProgress {
-  background-color: white;
-  position:relative;
-  top:-42vh !important;
-  bottom:33px;
-  width:256px;
- left:25vw;
- max-width;
+  width: 100%;
+    background-color: white;
+    position:relative;
+    top:-140px;
 }
 
 #myBar {
@@ -137,14 +136,14 @@ audio {
 }
 
 button.delete {
-  background: #f00;
+  background: #E61E28;
   padding: 0.5rem 0.75rem;
   font-size: 0.8rem;
   font-family:'TimesNewRoman','Times New Roman',Times,Baskerville,Georgia,serif;
 }
 
 button.upload {
-  background: green;
+  background: #4BA046;
   padding: 0.5rem 0.75rem;
   font-size: 0.8rem;
   font-family:'TimesNewRoman','Times New Roman',Times,Baskerville,Georgia,serif;
