@@ -33,6 +33,7 @@ position:relative;
   width:50%;
   margin:auto;
   left: 50vh;
+  top:-30vh;
 }
 
 #buttons {
@@ -64,7 +65,8 @@ position:relative;
   width: 50;
   background-color: white;
   position:relative;
-  top:-140px;
+  top:-42vh !important;
+  bottom:33px;
   width:100vh;
  left:25vw;
 }
@@ -121,6 +123,11 @@ audio {
 .clip p {
   display: inline-block;
   font-size: 1rem;
+}
+
+#buttons{
+ position:relative;
+ bottom:30vh;
 }
 
 .clip button {
