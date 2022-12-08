@@ -133,12 +133,14 @@ button.delete {
   background: #f00;
   padding: 0.5rem 0.75rem;
   font-size: 0.8rem;
+  font-family:'TimesNewRoman','Times New Roman',Times,Baskerville,Georgia,serif;
 }
 
 button.upload {
   background: green;
   padding: 0.5rem 0.75rem;
   font-size: 0.8rem;
+  font-family:'TimesNewRoman','Times New Roman',Times,Baskerville,Georgia,serif;
 }
 
 
