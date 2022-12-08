@@ -28,10 +28,9 @@ var s3 = new AWS.S3({
   params: { Bucket: uploadBucketName }
 });
 
-function windowOnClick(event) {}
-
-
-window.addEventListener("click", windowOnClick);
+// is this necessary?
+// function windowOnClick(event) {}
+// window.addEventListener("click", windowOnClick);
 
 // disable stop button while not recording
 
@@ -311,3 +310,20 @@ window.onresize = function () {
 }
 
 window.onresize();
+
+
+var buttonstate=0;
+function recordStopOnOff() {
+  buttonstate= 1 - buttonstate;
+  var el=document.getElementById('recordStop');
+  if(buttonstate)
+  {
+  el.style.background="url('assets/stop_button.svg')";
+el.style.backgroundRepeat="no-repeat";
+  }
+  else
+  {
+ el.style.background="url('assets/record_button.svg')";    
+ el.style.backgroundRepeat="no-repeat";
+  }
+}

@@ -63,6 +63,15 @@ header{
   justify-content:center;
 }
 
+.recordStop{
+  background: url(assets/record_button.svg);
+  background-repeat: no-repeat;
+  width:200px;
+  height:200px;
+  visibility: visible;
+  justify-content: center;
+}
+
 #myProgress {
   width: 100%;
   background-color: white;
@@ -94,6 +103,8 @@ button:active {
   transform: translateY(2px);
 }
 */
+
+/*button: {background-image: url(assets/stop_button.svg) ;}*/
 
 /* Make the clips use as much space as possible, and
  * also show a scrollbar when there are too many clips to show
