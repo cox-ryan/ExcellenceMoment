@@ -8,13 +8,23 @@ body {
 
 .wrapper{
   display: grid;
-  background: #000000;
+  background: black;
+
 }
 
 header{
   display: flex;
   justify-content: center;
 		}
+    #wrapper h1{
+     font-family:'TimesNewRoman','Times New Roman',Times,Baskerville,Georgia,serif;
+     font-weight:300;
+     font-size: 1.0vs;
+     text-align: center;
+     position:relative;
+     top:-100px;
+     color:#ffffff !important;
+    }
 
   main{
     margin:auto;
@@ -22,26 +32,24 @@ header{
     justify-content: center;
   }
 
-  label{
-    color:white;
-    font-size: 4vh;
-  }
-
   #offices{
    font-size:20px;
+   font-family: TimesNewRoman;
    position:relative;
-   top:-8px;
-   left:8px;
+  top:-100px;
+  text-align: center;
   }
 
   footer{
-    background-color: black;
+
     margin: auto;
     max-width: 100%;
+    position:relative;
+    top:-100px;
     }
     #startButton{
      width:auto !important;
      height:auto !important;
      min-width:200px;
-     border-width: 7px;
+
     }

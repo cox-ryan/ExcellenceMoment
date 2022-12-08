@@ -27,15 +27,12 @@ header{
   top:-140px;
 }
 
-.visualiser{
-  display: flex;
-  justify-content: center;
-  max-width: inherit;
-  min-width:0px;
-  display:inline-block;
-  transform:translatex(0px) translatey(0px) !important;
+.wrapper .main-controls .visualizer{
+position:relative;
   height:75px;
-  width:100%;
+  width:50%;
+  margin:auto;
+  left: 50vh;
 }
 
 #buttons {
@@ -64,10 +61,12 @@ header{
 }
 
 #myProgress {
-  width: 100%;
+  width: 50;
   background-color: white;
   position:relative;
   top:-140px;
+  width:100vh;
+ left:25vw;
 }
 
 #myBar {
