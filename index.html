@@ -10,13 +10,22 @@
   <body>
     <div class="wrapper" id="wrapper">
       <header>
-         <img src="assets/Backgrounds-01.svg" alt="home"style="max-height: 800px;">
+         <img src="assets/interface-01.svg" alt="home"style="max-height: 800px;">
       </header>
-      <h1> Choose your office:</h1>
-      <main>
 
-        <form>
-
+          <h1>Choose the focus of your story</h1>
+        <form name="form1">
+          <select name="focus" id="focus" onchange="if (this.selectedIndex) start();">
+              <option value="culture">Culture</option>
+              <option value="innovation">Innovation</option>
+              <option value="brilliance">Brillance</option>
+              <option value="influence">Influence</option>
+              <option value="rigor">Rigor</option>
+              <option value="other">other</option>
+            </select>
+      </form>
+        <h2> Choose your office:</h2>
+        <form name="form2">
           <select name="office" id="offices" onchange="if (this.selectedIndex) start();">
               <option value="boston">Boston</option>
               <option value="chicago">Chicago</option>
@@ -34,7 +43,6 @@
               <option value="washingtondc">Washington D.C.</option>
             </select>
       </form>
-    </main>
     <footer>
         <a href="application.html"><input  type="image" border="0" src="assets/Start_button-v2.svg" width="250" height="125" class="center" id="startButton" style="visibility: hidden">
       </footer>
@@ -52,5 +60,6 @@
   }
 
   document.getElementById("offices").selectedIndex = -1;
+    document.getElementById("focus").selectedIndex = -1;
   </script>
 </html>

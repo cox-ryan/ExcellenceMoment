@@ -25,6 +25,15 @@ header{
      top:-100px;
      color:#ffffff !important;
     }
+    #wrapper h2{
+     font-family:'TimesNewRoman','Times New Roman',Times,Baskerville,Georgia,serif;
+     font-weight:200;
+     font-size: 26px;
+     text-align: center;
+     position:relative;
+     top:-100px;
+     color:#ffffff !important;
+    }
 
   main{
     margin:auto;
@@ -38,6 +47,20 @@ header{
    position:relative;
   top:-100px;
   text-align: center;
+  margin: auto;
+  justify-content: center;
+  display: block;
+  }
+
+
+  #focus{
+   font-size:20px;
+   font-family: TimesNewRoman;
+   position:relative;
+  top:-100px;
+  text-align: center;
+  margin: auto;
+  display: block;
   }
 
   footer{
