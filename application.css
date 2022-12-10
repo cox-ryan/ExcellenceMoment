@@ -27,9 +27,9 @@ body {
 
 .bottomSection {
   position: absolute;
-  bottom: 0;
+  bottom: -50px;
   width: 100%;
-  margin-bottom: 10px;
+  padding-bottom: 20px;
 }
 
 #buttons {

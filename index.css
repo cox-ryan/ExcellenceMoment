@@ -13,7 +13,7 @@ body {
 
 .bottomSection {
   position: absolute;
-  bottom: -150px;
+  bottom: -200px;
   width: 100%;
   display: flex;
   flex-direction: column;
