@@ -1,9 +1,3 @@
-
-
-html, body {
-
-}
-
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 0.8rem;
@@ -11,64 +5,99 @@ body {
 }
 
 .wrapper {
-display: grid;
-background: #000000;
-
+  background: #000000;
 }
 
-header{
+.headerImage {
   display: flex;
   justify-content: center;
 }
 
-.main-controls {
-  width:auto;
-  position:relative;
-  top:-140px;
-
+.headerImage img {
+  max-height: 700px;
 }
 
-.wrapper .main-controls .visualizer{
-  display: flex;
+.wrapper .controls .visualizer{
+  display: none;
   justify-content: center;
-  max-width: inherit;
-  min-width:0px;
-  display:inline-block;
-  transform:translatex(0px) translatey(0px) !important;
-  height:75px;
-  width:100%;
+  height: 75px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.bottomSection {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 #buttons {
   display: flex;
   flex-direction: row;
-  height:200px;
   justify-content: center;
 }
 
-.record{
+.controls button {
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  background-position: center;
+  padding-top: 100px;
+  font-size: 0.8rem;
+}
+
+.clipButtons button {
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  background-position: center;
+  padding-top: 100px;
+  font-size: 0.8rem;
+}
+
+.record {
   background: url(assets/record_button.svg);
+}
+.record:active {
+  background: url(assets/record_button_depressed.svg);
+  background-position: center;
   background-repeat: no-repeat;
-  width:200px;
-  height:200px;
-  visibility: visible;
-  justify-content: center;
 }
 
-.stop{
+.stop {
   background: url(assets/stop_button.svg);
+  display: none;
+}
+.stop:active {
+  background: url(assets/stop_button_depressed.svg);
+  background-position: center;
   background-repeat: no-repeat;
-  width:200px;
-  height:200px;
-  visibility: hidden;
-  justify-content:center;
 }
 
-#myProgress {
+.upload {
+  background: url(assets/upload_button.svg);
+}
+.upload:active {
+  background: url(assets/upload_button_depressed.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.delete {
+  background: url(assets/delete_button.svg);
+}
+.delete:active {
+  background: url(assets/delete_button_depressed.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.clipProgress {
+  display: none;
   width: 100%;
-    background-color: white;
-    position:relative;
-    top:-140px;
+  background-color: white;
+  position:relative;
 }
 
 #myBar {
@@ -99,54 +128,22 @@ button:active {
 /* Make the clips use as much space as possible, and
  * also show a scrollbar when there are too many clips to show
  * in the available space */
-.sound-clips {
-  flex: 1;
-  overflow: auto;
-  position:relative;
-  top:-136px;
-}
-
-section, article {
-  display: block;
-}
 
 .clip {
-  padding-bottom: 1rem;
+  display: none;
+  width: 100%;
 }
 
 audio {
   width: 100%;
-  display: block;
   margin: 1rem auto 0.5rem;
 }
 
-.clip p {
-  display: inline-block;
-  font-size: 1rem;
-}
-
-#buttons{
- position:relative;
- bottom:30vh;
-}
-
-.clip button {
-  font-size: 1rem;
-  float: right;
-}
-
-button.delete {
-  background: #E61E28;
-  padding: 0.5rem 0.75rem;
-  font-size: 0.8rem;
-  font-family:'TimesNewRoman','Times New Roman',Times,Baskerville,Georgia,serif;
-}
-
-button.upload {
-  background: #4BA046;
-  padding: 0.5rem 0.75rem;
-  font-size: 0.8rem;
-  font-family:'TimesNewRoman','Times New Roman',Times,Baskerville,Georgia,serif;
+.clipButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
 }
 
 
@@ -190,10 +187,4 @@ aside a {
 /* Toggled State of information box */
 input[type=checkbox]:checked ~ aside {
   transform: translateX(0);
-}
-
-/* Cursor when clip name is clicked over */
-
-.clip p {
-  cursor: pointer;
 }

@@ -1,79 +1,111 @@
-.home{
-
-}
-
 body {
   background-color: black;
 }
 
-.wrapper{
-  display: grid;
-  background: black;
-
-}
-
-header{
+.headerImage {
   display: flex;
   justify-content: center;
-		}
-    #wrapper h1{
-     font-family:'TimesNewRoman','Times New Roman',Times,Baskerville,Georgia,serif;
-     font-weight:200;
-     font-size: 26px;
-     text-align: center;
-     position:relative;
-     top:-100px;
-     color:#ffffff !important;
-    }
-    #wrapper h2{
-     font-family:'TimesNewRoman','Times New Roman',Times,Baskerville,Georgia,serif;
-     font-weight:200;
-     font-size: 26px;
-     text-align: center;
-     position:relative;
-     top:-100px;
-     color:#ffffff !important;
-    }
+}
 
-  main{
-    margin:auto;
-    display: flex;
-    justify-content: center;
-  }
+.headerImage img {
+  max-height: 700px;
+}
 
-  #offices{
-   font-size:20px;
-   font-family: TimesNewRoman;
-   position:relative;
-  top:-100px;
+.bottomSection {
+  position: absolute;
+  bottom: -150px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bottomSectionThankYou {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#wrapper h1{
+  font-family:'TimesNewRoman','Times New Roman',Times,Baskerville,Georgia,serif;
+  font-weight:200;
+  font-size: 26px;
+  text-align: center;
+  position:relative;
+  color:#ffffff !important;
+}
+#wrapper h2{
+  font-family:'TimesNewRoman','Times New Roman',Times,Baskerville,Georgia,serif;
+  font-weight:200;
+  font-size: 26px;
+  text-align: center;
+  position:relative;
+  color:#ffffff !important;
+}
+
+main {
+  margin:auto;
+  display: flex;
+  justify-content: center;
+}
+
+.offices {
+  font-size:20px;
+  font-family: TimesNewRoman;
+  position:relative;
   text-align: center;
   margin: auto;
   justify-content: center;
   display: block;
-  }
+}
 
-
-  #focus{
-   font-size:20px;
-   font-family: TimesNewRoman;
-   position:relative;
-  top:-100px;
+.focus {
+  font-size:20px;
+  font-family: TimesNewRoman;
+  position:relative;
   text-align: center;
   margin: auto;
   display: block;
   width: 162px;
-  }
+}
 
-  footer{
+#focus option, #offices option {
+  font-size: 15px;
+  line-height: 40px;
+}
 
-    margin: auto;
-    max-width: 100%;
-    position:relative;
-    top:-100px;
-    }
-    #startButton{
-     width:auto !important;
-     height:auto !important;
-     min-width:200px;
+.start {
+  background-color: #E61E28;
+  border-radius: 15px;
+  margin: 30px;
+  width: 100px;
+  height: 60px;
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: arial;
+  font-weight: bold;
+  font-size: 22px;
+  text-decoration: none;
+}
 
-    }
+.exit {
+  background-color: #E61E28;
+  border-radius: 15px;
+  margin: 30px;
+  width: 100px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: arial;
+  font-weight: bold;
+  font-size: 22px;
+  text-decoration: none;
+}

@@ -10,23 +10,28 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <img src="assets/interface-02.svg" alt="home" style="max-height: 800px;">
-      </header>
-      <section class="main-controls">
-        <div id="buttons">
-          <button class="record" id="record"></button>
-          <button class="stop" id="stop"></button>
-        </div>
-        <canvas class="visualizer" height="50px" width="20%"></canvas>
-      </section>
-      <div id="myProgress">
-        <div id="myBar"></div>
+      <div class="headerImage">
+        <img src="assets/interface-02.png" alt="home">
       </div>
-      <br>
-      <br>
-      <section class="sound-clips" height="400px">
-      </section>
+      <div class="bottomSection">
+        <div class="controls">
+          <div id="buttons">
+            <button class="record">Record</button>
+            <button class="stop">Stop</button>
+          </div>
+          <canvas class="visualizer"></canvas>
+        </div>
+        <div class="clipProgress">
+          <div id="myBar"></div>
+        </div>
+        <div class="clip">
+          <audio controls class="clipPlayer"></audio>
+          <div class="clipButtons">
+            <button class="delete">Delete</button>
+            <button class="upload">Upload</button>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="application.js"></script>
   </body>
